@@ -5,3 +5,5 @@ function calcularPropina(total, porcentaje){
 }
 console.log ("total a pagar: ", calcularPropina(500,5)) 
 
+
+
