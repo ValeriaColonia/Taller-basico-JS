@@ -1,10 +1,15 @@
-function calcularPromedio(notas){
-    let sumatoria = 0 
-    for (let i = 0; i <= notas.length; i++){
+const prompt = require("prompt-sync")();
+
+let notas = prompt("Ingrese sus notas separadas por coma: ")
+            .split(",")
+            .map(Number);
+
+function calcularPromedio(notas) {
+    let sumatoria = 0;
+    for (let i = 0; i < notas.length; i++) {
         sumatoria += notas[i];
     }
-    let resultado = sumatoria/notas.length
-    return sumatoria/notas.length.toFixed(2)
+    return (sumatoria / notas.length).toFixed(2);
 }
-notas = [1,2,3,4,5]
-console.log(calcularPromedio(notas)) 
+
+console.log("El promedio es:", calcularPromedio(notas));
